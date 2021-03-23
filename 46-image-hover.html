@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        :root {
+            --bg-color: #1e272e;
+            --center-border-color: #485460;
+            --text-color: yellow;
+            --text-color1: transparent;
+            --text-animation-color: #080a29;
+            --silver-bg-color: 161, 161, 161;
+            --box-shadow: 0.5rem 0.5rem 0.8rem 0rem rgba(17, 16, 16, 0.5);
+            --box-shadow-hor: 0.2rem 0.2rem 0.8rem 0rem rgba(17, 16, 16, 0.5);
+            --box-shadow-line: 0rem 0rem 0.6rem 0rem rgba(17, 16, 16, 0.5);
+        }
+
+        .banner {
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--bg-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .banner .center figure {
+            width: 35vw;
+            height: 53vh;
+            position: relative;
+            overflow: hidden;
+            border: 1rem solid rgba(var(--silver-bg-color), 0.1);
+            background-color: var(--center-border-color);
+            -webkit-box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(87, 86, 86, 0.808);
+            box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(87, 86, 86, 0.808);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .banner .center figure::after {
+            content: " ";
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            -webkit-transition: 0.6s linear;
+            transition: 0.6s linear;
+        }
+
+        .banner .center figure:hover::after {
+            opacity: 1;
+        }
+
+        .banner .center figure img {
+            width: 100vw;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -webkit-transition: 1s all;
+            transition: 1s all;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .banner .center figure figcaption {
+            position: absolute;
+            width: 20vw;
+            height: auto;
+            top: 110%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: 0.6s linear;
+            transition: 0.6s linear;
+        }
+
+        .banner .center figure figcaption h1 {
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            font-family: 'Roboto',
+                sans-serif;
+            letter-spacing: 0.1rem;
+            color: #c5c4c4;
+        }
+
+        .banner .center figure:hover img {
+            -webkit-transform: scale(1.2) rotate(4deg);
+            transform: scale(1.2) rotate(4deg);
+        }
+
+        .banner .center figure:hover figcaption {
+            opacity: 1;
+            top: 50%;
+            z-index: 1;
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="center">
+            <figure>
+                <img src="holi.jpg" alt="Holi-image">
+                <figcaption>
+                    <h1>Happy Holi - 2021</h1>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+
+</html>
